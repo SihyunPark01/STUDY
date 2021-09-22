@@ -1,0 +1,47 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>약관</title>
+    <link rel="stylesheet" href="/Jboard3/css/style.css"/>   
+    <script>
+    	
+    
+    </script> 
+</head>
+<body>
+    <div id="wrapper">
+        <section id="user" class="terms">
+            <table>
+                <caption>사이트 이용약관</caption>
+                <tr>
+                    <td>
+                        <textarea readonly>${requestScope.vo.getTerms()}</textarea>
+                        <p>
+                            <label><input type="checkbox" name="chk1"/>동의합니다.</label>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <caption>개인정보 취급방침</caption>
+                <tr>
+                    <td>
+                        <textarea readonly>${vo.privacy}</textarea>
+                        <p>
+                            <label><input type="checkbox" name="chk2"/>동의합니다.</label>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <a href="/Jboard3/user/login.do">취소</a>
+                <a href="/Jboard3/user/register.do">다음</a>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
