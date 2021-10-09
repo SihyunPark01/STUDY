@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn1")
+            .data({"text":"javascript"})
+            .on({
+                "mouseover": overFnc,
+                "mouseout": outFnc 
+            });
+            
+            $("#btn2")
+            .data({"text":"welcome!"})
+            .on({
+                "mouseover": overFnc,
+                "mouseout": outFnc 
+            });
+
+            function overFnc(){
+                $(".txt").text($(this).data("text"));
+            }
+            function outFnc(){
+                $(".txt").text("");
+            }
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <p><button id="btn1">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <p class="txt"></p>
+</body>
+</html>
